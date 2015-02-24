@@ -9,6 +9,23 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <bm:Map Credentials="AgsObhocNcB4ZhZOAGEKexbAXYunEHAdQRwfROYw1seBGGXRoYr1W0uq5jRyWdzs" x:Name="myMap" Margin="355,0,0,0"></bm:Map>
+        <bm:Map Credentials="AgsObhocNcB4ZhZOAGEKexbAXYunEHAdQRwfROYw1seBGGXRoYr1W0uq5jRyWdzs" x:Name="myMap" Margin="283,0,0,0"></bm:Map>
+
+        <StackPanel Margin="10,491,1088,0">
+            <Button Content="Pyramide de Khéops"
+                    Click="Button_Click_1" Width="250"/>
+            <Button Content="Jardins suspendus de Babylone"
+                    Click="Button_Click_2" Width="250"/>
+            <Button Content="Statue chryséléphantine de Zeus"
+                    Click="Button_Click_3"/>
+            <Button Content="Mausolée d'Halicarnasse"
+                    Click="Button_Click_4" Width="250"/>
+            <Button Content="Temple d'Artémis"
+                    Click="Button_Click_5" Width="250"/>
+            <Button Content="Colosse de Rhodes"
+                    Click="Button_Click_6" Width="250"/>
+            <Button Content="Phare d'Alexandrie"
+                    Click="Button_Click_7" Width="250"/>
+        </StackPanel>
     </Grid>
 </Page>
