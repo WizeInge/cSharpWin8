@@ -36,9 +36,8 @@ namespace LesSeptMerveillesDuMonde
             this.InitializeComponent();
         }
 
-        private async void Button_Click_1(object sender, RoutedEventArgs e)
+        private void Button_Click_1(object sender, RoutedEventArgs e)
         {   //Muraille
-
             myMap.Center = new Location(40.440023, 117.257423); // Centre la carte au coord.
             myMap.ZoomLevel = 18;
         }
@@ -70,13 +69,19 @@ namespace LesSeptMerveillesDuMonde
         private void Button_Click_6(object sender, RoutedEventArgs e)
         {   //colisée
             myMap.Center = new Location(41.8902102, 12.4922308);
-            myMap.ZoomLevel = 18;
+            myMap.ZoomLevel = 19;
         }
 
         private void Button_Click_7(object sender, RoutedEventArgs e)
         {   // Taj Mahal
             myMap.Center = new Location(27.173891, 78.042068);
             myMap.ZoomLevel = 18;
+        }
+
+        private void Button_Click_8(object sender, RoutedEventArgs e)
+        {   // Pyramide
+            myMap.Center = new Location(29.9757396, 31.1320991);
+            myMap.ZoomLevel = 17;
         }
     }
 }
