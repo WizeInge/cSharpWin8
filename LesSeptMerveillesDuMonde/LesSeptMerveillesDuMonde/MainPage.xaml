@@ -42,5 +42,12 @@
         <Button Content="Les Pyramides de Khéops"
             	Click="Button_Click_8" Width="261"
             	Margin="7,699,0,463"/>
+        <TextBlock FontSize="20" Text="Chercher une autre merveille : "
+                   Margin="10,877,1079,259"/>
+        <TextBox Name="searchBox" Margin="10,909,1088,259"/>
+        <Button Content="Trouver !"
+            	Click="Button_Click_9" Width="126"
+            	Margin="155,962,0,200"/>
+        
     </Grid>
 </Page>

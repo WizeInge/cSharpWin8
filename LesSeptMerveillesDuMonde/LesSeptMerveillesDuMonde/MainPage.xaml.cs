@@ -19,6 +19,8 @@ using Windows.UI.Xaml.Navigation;
 using Windows.Devices.Geolocation;
 
 using Bing.Maps;
+using Bing.Maps.Search;
+using System.Diagnostics;
 
 
 
@@ -82,6 +84,22 @@ namespace LesSeptMerveillesDuMonde
         {   // Pyramide
             myMap.Center = new Location(29.9757396, 31.1320991);
             myMap.ZoomLevel = 17;
+        }
+
+        private async void Button_Click_9(object sender, RoutedEventArgs e)
+        {   // Search monuments
+
+            string locate = searchBox.Text;
+
+            // Set the address string to geocode
+            Bing.Maps.Search.GeocodeRequestOptions requestOptions = new Bing.Maps.Search.GeocodeRequestOptions(locate);
+
+            // Make the geocode request 
+            Bing.Maps.Search.SearchManager searchManager = myMap.SearchManager;
+            Bing.Maps.Search.LocationDataResponse response = await searchManager.GeocodeAsync(requestOptions);
+
+            myMap.Center = new Location(response.LocationData[0].Location);
+            myMap.ZoomLevel = 15;
         }
     }
 }
