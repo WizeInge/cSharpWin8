@@ -10,28 +10,30 @@
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <bm:Map Credentials="AgsObhocNcB4ZhZOAGEKexbAXYunEHAdQRwfROYw1seBGGXRoYr1W0uq5jRyWdzs" x:Name="myMap" Margin="298,0,0,0" MapType="Aerial"></bm:Map>
-        <TextBlock FontSize="20" FontFamily="DengXian" Text="Les Sept Merveilles du monde"
-                   Margin="10,26,1068,701"/>
+        <TextBlock FontSize="20" FontFamily="DengXian" Text="Les Sept nouvelles"
+                   Margin="55,21,1134,711"/>
+        <TextBlock FontSize="20" FontFamily="DengXian" Text="Merveilles du monde"
+                   Margin="45,62,1111,670"/>
         <StackPanel Margin="10,281,1088,0">
-            <Button Content="Pyramide de Khéops"
+            <Button Content="Grande Muraille de Chine"
                     Click="Button_Click_1" Width="261"
                      Margin="0,20,0,10"/>
-            <Button Content="Jardins suspendus de Babylone"
+            <Button Content="Pétra"
                     Click="Button_Click_2" Width="261"
                      Margin="0,20,0,10"/>
-            <Button Content="Statue chryséléphantine de Zeus"
+            <Button Content="Christ Rédempteur"
                     Click="Button_Click_3"
                      Margin="0,20,0,10" Width="261"/>
-            <Button Content="Mausolée d'Halicarnasse"
+            <Button Content="Machu Picchu"
                     Click="Button_Click_4" Width="261"
                      Margin="0,20,0,10"/>
-            <Button Content="Temple d'Artémis"
+            <Button Content="Chichén Itzá"
                     Click="Button_Click_5" Width="261"
                      Margin="0,20,0,10"/>
-            <Button Content="Colosse de Rhodes"
+            <Button Content="Colisée"
                     Click="Button_Click_6" Width="261"
                     Margin="0,20,0,10"/>
-            <Button Content="Phare d'Alexandrie"
+            <Button Content="Taj Mahal"
             	Click="Button_Click_7" Width="261"
             	Margin="0,20,0,10"/>
         </StackPanel>
