@@ -1,14 +1,13 @@
-Hello Git Hub
-=============
+Hello Git Hub - Les Sept nouvelles merveilles du monde 
+======================================================
+Hijackers Inc. By Cyril P. Boris D. & Thomas B.
 
 Pour le projet : 
--Api Bing Maps
+- Api Bing Maps
 
 Une application qui liste les 7 nouvelles merveilles du mondes.
 
-A gauche : Une explication du monument choisi + Listes des monuments (choix du monument)
-A droite : la map de Bing maps
 
 Quelques options :
-- Rechercher un autre lieu
-- (A voir ...)
+- Rechercher un autre lieu : Done !
+- Ajouter les infos (source Wiki ?) : En cours ..
