@@ -9,8 +9,8 @@
     mc:Ignorable="d" Height="1200">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <bm:Map Credentials="AgsObhocNcB4ZhZOAGEKexbAXYunEHAdQRwfROYw1seBGGXRoYr1W0uq5jRyWdzs" x:Name="myMap" Margin="298,0,0,0" MapType="Aerial"></bm:Map>
 
+        <bm:Map Credentials="AgsObhocNcB4ZhZOAGEKexbAXYunEHAdQRwfROYw1seBGGXRoYr1W0uq5jRyWdzs" x:Name="myMap" Margin="298,0,0,0" MapType="Aerial"/>
         <TextBlock FontSize="20" Text="Les Sept nouvelles"
                    Margin="55,21,1134,1138"/>
         <TextBlock FontSize="20" Text="Merveilles du monde"
@@ -53,5 +53,8 @@
             	Click="Button_Click_9" Width="130" Margin="150,20,0,0"/>
         </StackPanel>
 
+        <StackPanel Margin="1167,23,10,10">
+            <WebView x:Name="WebContainer" Height="1134" Margin="10,0" Canvas.ZIndex="1" Opacity="0.5"/>
+        </StackPanel>
     </Grid>
 </Page>
