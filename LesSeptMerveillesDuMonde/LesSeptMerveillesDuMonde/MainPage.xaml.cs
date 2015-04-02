@@ -21,9 +21,6 @@ using Windows.Devices.Geolocation;
 
 using Bing.Maps;
 using Bing.Maps.Search;
-using Newtonsoft.Json;
-using Windows.Data.Json;
-using Windows.Storage;
 
 
 namespace LesSeptMerveillesDuMonde
@@ -41,7 +38,7 @@ namespace LesSeptMerveillesDuMonde
             myMap.ZoomLevel = 18;
 
             Uri muraille = new Uri("http://fr.wikipedia.org/wiki/Grande_Muraille");
-            convertUrl(muraille);
+            displayHtml(muraille);
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
@@ -50,7 +47,7 @@ namespace LesSeptMerveillesDuMonde
             myMap.ZoomLevel = 18;
 
             Uri petra = new Uri("http://fr.wikipedia.org/wiki/P%C3%A9tra");
-            convertUrl(petra);
+            displayHtml(petra);
         }
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
@@ -59,7 +56,7 @@ namespace LesSeptMerveillesDuMonde
             myMap.ZoomLevel = 18;
 
             Uri christ = new Uri("http://fr.wikipedia.org/wiki/Christ_R%C3%A9dempteur");
-            convertUrl(christ);
+            displayHtml(christ);
         }
 
         private void Button_Click_4(object sender, RoutedEventArgs e)
@@ -68,7 +65,7 @@ namespace LesSeptMerveillesDuMonde
             myMap.ZoomLevel = 18;
 
             Uri machu = new Uri("http://fr.wikipedia.org/wiki/Machu_Picchu");
-            convertUrl(machu);
+            displayHtml(machu);
         }
 
         private void Button_Click_5(object sender, RoutedEventArgs e)
@@ -77,7 +74,7 @@ namespace LesSeptMerveillesDuMonde
             myMap.ZoomLevel = 18;
 
             Uri itza = new Uri("http://fr.wikipedia.org/wiki/Chich%C3%A9n_Itz%C3%A1");
-            convertUrl(itza);
+            displayHtml(itza);
         }
 
         private void Button_Click_6(object sender, RoutedEventArgs e)
@@ -86,7 +83,7 @@ namespace LesSeptMerveillesDuMonde
             myMap.ZoomLevel = 19;
 
             Uri colisee = new Uri("http://fr.wikipedia.org/wiki/Colis%C3%A9e");
-            convertUrl(colisee);
+            displayHtml(colisee);
         }
 
         private void Button_Click_7(object sender, RoutedEventArgs e)
@@ -95,7 +92,7 @@ namespace LesSeptMerveillesDuMonde
             myMap.ZoomLevel = 18;
 
             Uri TajMhal = new Uri("http://fr.wikipedia.org/wiki/Taj_Mahal");
-            convertUrl(TajMhal);
+            displayHtml(TajMhal);
         }
 
         private void Button_Click_8(object sender, RoutedEventArgs e)
@@ -104,7 +101,7 @@ namespace LesSeptMerveillesDuMonde
             myMap.ZoomLevel = 17;
 
             Uri pyramide = new Uri("http://fr.wikipedia.org/wiki/Pyramide_de_Kh%C3%A9ops");
-            convertUrl(pyramide);
+            displayHtml(pyramide);
         }
 
         private async void Button_Click_9(object sender, RoutedEventArgs e)
@@ -125,41 +122,9 @@ namespace LesSeptMerveillesDuMonde
             WebContainer.Opacity = 0;
         }
 
-        private async void convertUrl(/*string monuments,*/ Uri pageHtml)
+        private void displayHtml(Uri pageHtml)
         {
-            //HttpWebRequest myRequest = (HttpWebRequest)WebRequest.Create("http://fr.wikipedia.org/w/api.php?format=json&action=query&prop=revisions&rvprop=content&rvsection=0&rvparse&titles=" + monuments);
-            //using (HttpWebResponse response = (HttpWebResponse)(await myRequest.GetResponseAsync()))
-            //{
-            //    string ResponseText;
-            //    string[] ResponseArray;
-            //    string test;
-            //    string tests;
-            //    using (StreamReader reader = new StreamReader(response.GetResponseStream()))
-            //    {
-            //        ResponseText = reader.ReadToEnd();
-            //        ResponseArray = ResponseText.Split(new string[] { "\"pageid\"" }, StringSplitOptions.None);
-            //        test = "{ \"pageid\"" + ResponseArray[1];
-            //        tests = test.Replace("}]}}}}", "}]}");
-
-            //       /* Debug.WriteLine(string.Join(", ", ResponseText));
-            //        Debug.WriteLine(string.Join(", ", tests));*/
-            //        InfoMonuments objJson = new InfoMonuments();
-
-            //        objJson = JsonConvert.DeserializeObject<InfoMonuments>(tests);
-            //        foreach (string element in (dynamic)(objJson.revisions[0]))
-            //        {
-            //            //Debug.WriteLine(element);
-            //            var localFolder = ApplicationData.Current.LocalFolder;
-            //            var pageHtml = await localFolder.CreateFileAsync("page.html",
-            //                                              CreationCollisionOption.OpenIfExists);
-
-            //            await FileIO.WriteTextAsync(pageHtml, element);
-
-            //            Uri testHtml = new Uri("http://fr.wikipedia.org/wiki/Taj_Mahal");
-            //            WebContainer.Navigate(testHtml);
-            //        }
-            //    }
-            //}
+            //Affiche la webView avec la page html correspondate !
             WebContainer.Opacity = 0.5;
             WebContainer.Navigate(pageHtml);
         }
