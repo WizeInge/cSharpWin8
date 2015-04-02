@@ -108,18 +108,25 @@ namespace LesSeptMerveillesDuMonde
         {   // Search monuments
             string locate = searchBox.Text;
 
-            // Set the address string to geocode
-            Bing.Maps.Search.GeocodeRequestOptions requestOptions = new Bing.Maps.Search.GeocodeRequestOptions(locate);
+            if(locate != "")
+            {
+                // Set the address string to geocode
+                Bing.Maps.Search.GeocodeRequestOptions requestOptions = new Bing.Maps.Search.GeocodeRequestOptions(locate);
 
-            // Make the geocode request 
-            Bing.Maps.Search.SearchManager searchManager = myMap.SearchManager;
-            Bing.Maps.Search.LocationDataResponse response = await searchManager.GeocodeAsync(requestOptions);
+                // Make the geocode request 
+                Bing.Maps.Search.SearchManager searchManager = myMap.SearchManager;
+                Bing.Maps.Search.LocationDataResponse response = await searchManager.GeocodeAsync(requestOptions);
 
-            myMap.Center = new Location(response.LocationData[0].Location);
-            myMap.ZoomLevel = 16;
+                myMap.Center = new Location(response.LocationData[0].Location);
+                myMap.ZoomLevel = 16;
 
-            //Mise a 0 de l'opacité du webview
-            WebContainer.Opacity = 0;
+                //Mise a 0 de l'opacité du webview
+                WebContainer.Opacity = 0;
+            }
+            else
+            {
+                searchBox.Text = "Rentrer un champs ici !";
+            }
         }
 
         private void displayHtml(Uri pageHtml)
