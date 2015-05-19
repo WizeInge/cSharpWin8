@@ -125,7 +125,7 @@ namespace LesSeptMerveillesDuMonde
             }
             else
             {
-                searchBox.Text = "Rentrer un champs ici !";
+                searchBox.Text = "Marseille";
             }
         }
 
