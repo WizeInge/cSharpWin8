@@ -10,7 +10,7 @@
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-        <bm:Map Credentials="AgsObhocNcB4ZhZOAGEKexbAXYunEHAdQRwfROYw1seBGGXRoYr1W0uq5jRyWdzs" x:Name="myMap" Margin="298,0,0,0" MapType="Aerial"/>
+        <bm:Map Credentials="AnPKj2TPi2gn_YYiDXE6KGJjaWzRmFnk3wnQCxAiojyDJQpW6An8vbXh0WoKaGY_" x:Name="myMap" Margin="298,0,0,0" MapType="Aerial"/>
         <TextBlock FontSize="20" Text="Les Sept nouvelles"
                    Margin="55,21,1134,1138"/>
         <TextBlock FontSize="20" Text="Merveilles du monde"
